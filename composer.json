@@ -1,0 +1,17 @@
+{
+    "name": "tavsec/php-nomad",
+    "description": "PHP client library for Hashicorp Nomad API",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Tavsec\\PhpNomad\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Timotej Avsec",
+            "email": "avsectimotej1@gmail.com"
+        }
+    ],
+    "require": {}
+}
