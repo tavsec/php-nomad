@@ -13,5 +13,16 @@
             "email": "avsectimotej1@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": "8.*",
+        "guzzlehttp/guzzle": "^7.5"
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
