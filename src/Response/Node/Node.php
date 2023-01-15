@@ -2,7 +2,9 @@
 
 namespace Tavsec\PhpNomad\Response\Node;
 
-class Node
+use Tavsec\PhpNomad\Response\Response;
+
+class Node implements Response
 {
     private string $id;
     private string $datacenter;
@@ -15,10 +17,81 @@ class Node
      * @var Resource[]
      */
     private array $resource;
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDatacenter(): string
+    {
+        return $this->datacenter;
+    }
+
+    /**
+     * @return string
+     */
+    public function getName(): string
+    {
+        return $this->name;
+    }
+
+    /**
+     * @return string
+     */
+    public function getHttpAddress(): string
+    {
+        return $this->httpAddress;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isTlsEnabled(): bool
+    {
+        return $this->tlsEnabled;
+    }
+
+    /**
+     * @return array
+     */
+    public function getAttributes(): array
+    {
+        return $this->attributes;
+    }
+
+    /**
+     * @return array
+     */
+    public function getResource(): array
+    {
+        return $this->resource;
+    }
+
+    /**
+     * @return array
+     */
+    public function getReserved(): array
+    {
+        return $this->reserved;
+    }
     /**
      * @var Resource[]
      */
     private array $reserved;
 
+    // TODO: Add remaining properties
 
+
+    public function __construct(array $response)
+    {
+        $this->id = $response["ID"];
+        // TODO: Map all attributes
+    }
 }
