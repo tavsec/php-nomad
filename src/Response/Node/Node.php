@@ -92,6 +92,11 @@ class Node implements Response
     public function __construct(array $response)
     {
         $this->id = $response["ID"];
+        $this->datacenter = $response["Datacenter"];
+        $this->name = $response["Name"];
+        $this->httpAddress = $response["Address"];
+        $this->tlsEnabled = boolval($response["TLSEnabled"]) ?? false;
+        $this->attributes = $response["Attributes"];
         // TODO: Map all attributes
     }
 }
